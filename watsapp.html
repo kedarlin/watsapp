@@ -3,34 +3,30 @@
   <head>
     <title>Watsapp</title>
     <link rel="stylesheet" href="watsapp.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  </link>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  
   <body>
     <div class="wa">
       <div class="wa-left">
         <div class="wa-left-nav">
           <div class="search-box">
-            <i class="fa fa-search" aria-hidden="true" class="search-icon"></i>
+            <i class="material-icons search-icon" style="font-size: 20px;">search</i>
             <input
-              type="text"
-              name="chat-serach"
-              class="search-input"
-              placeholder="Search messages, people"
+            type="text"
+            name="chat-search"
+            class="search-input"
+            placeholder="Search messages, people"
             />
           </div>
           <button class="chat-filter">
-             <img src="bars-filter.png" alt="filter-icon" class="chat-filter-icon" />
+            <i class="material-icons search-icon" style="font-size: 20px;">filter_list</i>
           </button>
         </div>
         <div class="left-chat-section">
           <div class="left-pinned-chats">
             <div class="left-pinned-title">
-              <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+              <i class="material-icons pin-icon" style="font-size: 16px;">push_pin</i>
               PINNED CHATS
             </div>
             <!-- Chat Overview -->
@@ -43,7 +39,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -56,7 +52,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -69,15 +65,16 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
+            <!-- Repeat the chat-overview div as needed -->
           </div>
 
           <div class="left-all-chats">
             <div class="left-all-title">
-              <i class="fa fa-commenting" aria-hidden="true" class=""></i>
+              <i class="material-icons chat-icon" style="font-size: 16px;">chat</i>
               ALL MESSAGES
             </div>
             <!-- Chat Overview -->
@@ -90,7 +87,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -103,7 +100,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -116,7 +113,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -129,7 +126,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -142,7 +139,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -155,7 +152,7 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
@@ -168,36 +165,11 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <i class="material-icons">check</i>
                 </div>
               </div>
             </div>
-            <div class="chat-overview">
-              <img src="dp.jpg" alt="" class="left-chat-profile" />
-              <div class="left-chat">
-                <div class="left-chat-name">
-                  Kedarling
-                  <p class="left-chat-time">8:30 PM</p>
-                </div>
-                <div class="left-chat-desc">
-                  i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-            <div class="chat-overview">
-              <img src="dp.jpg" alt="" class="left-chat-profile" />
-              <div class="left-chat">
-                <div class="left-chat-name">
-                  Kedarling
-                  <p class="left-chat-time">8:30 PM</p>
-                </div>
-                <div class="left-chat-desc">
-                  i wish i knew you wanted me...
-                  <i class="fa fa-check" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
+            <!-- Repeat the chat-overview div as needed -->
           </div>
         </div>
       </div>
@@ -212,9 +184,9 @@
             </div>
           </div>
           <div class="right-chat-others">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <i class="fa fa-video-camera" aria-hidden="true"></i>
-            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            <i class="material-icons call-icon" style="font-size: 22px;">call</i>
+            <i class="material-icons video-icon" style="font-size: 22px;">videocam</i>
+            <i class="material-icons triple-icon" style="font-size: 22px;">more_vert</i>
           </div>
         </div>
         <!-- Chat -->
@@ -323,18 +295,14 @@
               </div>
             </div>
           </div>
+          <!-- Repeat chat-from and chat-to divs as needed -->
         </div>
 
         <div class="chat-message">
           <div class="chat-left">
-            <i class="fa fa-paperclip" aria-hidden="true" class="chat-attach">
-            </i>
+            <i class="material-icons chat-attach">attach_file</i>
             <div class="chat-box">
-              <i
-                class="fa fa-smile-o"
-                aria-hidden="true"
-                class="chat-emoji"
-              ></i>
+              <i class="material-icons chat-emoji">insert_emoticon</i>
               <input
                 type="text"
                 class="chat-message-input"
@@ -344,11 +312,7 @@
           </div>
           <button class="chat-enter">
             Send
-            <i
-              class="fa fa-paper-plane"
-              aria-hidden="true"
-              class="chat-send"
-            ></i>
+            <i class="material-icons chat-send" style="font-size: 20px;">send</i>
           </button>
         </div>
       </div>
