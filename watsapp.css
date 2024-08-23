@@ -1,16 +1,18 @@
 body {
     margin: 0;
     height: 100vh;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 i {
     cursor: pointer;
     font-size: unset;
 }
+
 p {
     margin: 0;
 }
+
 .wa {
     display: flex;
     flex-direction: row;
@@ -60,10 +62,12 @@ p {
     border-radius: 10px;
     padding-top: 5px;
 }
-.chat-filter-icon{
+
+.chat-filter-icon {
     width: 18px;
     fill: #fff;
 }
+
 .left-chat-section {
     display: flex;
     flex-direction: column;
@@ -93,9 +97,11 @@ p {
     align-items: center;
     padding: 10px 15px;
 }
-.chat-overview i{
+
+.chat-overview i {
     font-size: 14px;
 }
+
 .chat-overview:hover {
     background-color: #d9f1ff;
     cursor: pointer;
@@ -318,10 +324,10 @@ p {
     width: 100%;
 }
 
-.chat-message-input{
+.chat-message-input {
     all: unset;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #000;
 }
 
@@ -341,7 +347,7 @@ p {
 
 .chat-send {
     padding-left: 10px;
-    font-size: 1p6x;
+    font-size: 16x;
 }
 
 
@@ -349,7 +355,7 @@ p {
 .emoji-popup {
     display: none;
     position: absolute;
-    background: #fff;
+    background: #e8e8e8;
     border: 1px solid #ccc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 99.8%;
@@ -357,14 +363,12 @@ p {
     right: 0;
     z-index: 1;
     bottom: 50px;
-  }
-  .emoji-popup button {
+}
+
+.emoji-popup button {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
-  }
-  .emoji-popup button:hover {
-    background: #f0f0f0;
-    border-radius: 50%;
-  }
+    padding: 5px 10px;
+}
