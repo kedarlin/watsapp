@@ -6,7 +6,6 @@ body {
 
 i {
     cursor: pointer;
-    color: #696969;
 }
 
 p {
@@ -297,6 +296,7 @@ p {
     flex-direction: row;
     width: 90%;
     align-items: center;
+    color: #696969;
 }
 
 .chat-box {
@@ -316,6 +316,7 @@ p {
     all: unset;
     width: 100%;
     font-size: medium;
+    color: #000;
 }
 
 .chat-enter {
@@ -334,5 +335,5 @@ p {
 .chat-send {
     padding-left: 25px;
     font-size: 22px;
-    color: white !important;
+    color: #fff !important;
 }
