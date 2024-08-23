@@ -7,6 +7,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/css/emoji.css" rel="stylesheet">
   </head>
 
   <body>
@@ -368,6 +370,7 @@
                 >insert_emoticon</i
               >
               <input
+                data-emojiable="true"
                 type="text"
                 class="chat-message-input"
                 placeholder="Type something"
@@ -382,7 +385,11 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/emoji-button.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="lib/js/config.min.js"></script>
+    <script src="lib/js/util.min.js"></script>
+    <script src="lib/js/jquery.emojiarea.min.js"></script>
+    <script src="lib/js/emoji-picker.min.js"></script>
     <script>
       // Open file input when paperclip icon is clicked
       document
@@ -391,17 +398,17 @@
           document.getElementById("file-input").click();
         });
 
-      // Initialize the emoji picker
-      const picker = new EmojiButton();
+        $(function () {
+        // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
+          emojiable_selector: '[data-emojiabletrue]',
+          assetsPath: 'lib/img/',
+          popupButtonClasses: 'fa fa-smile-o',
+        });
 
-      // Show emoji picker when emoji icon is clicked
-      const trigger = document.getElementById("emoji-icon");
-      picker.on("emoji", (emoji) => {
-        const input = document.querySelector(".chat-message-input");
-        input.value += emoji;
+        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+        window.emojiPicker.discover();
       });
-
-      trigger.addEventListener("click", () => picker.togglePicker(trigger));
     </script>
   </body>
 </html>

@@ -317,7 +317,7 @@ p {
     width: 100%;
 }
 
-.chat-message-input {
+.chat-message-input{
     all: unset;
     width: 100%;
     font-size: 14px;
