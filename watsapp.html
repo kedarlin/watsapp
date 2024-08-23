@@ -7,8 +7,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/css/emoji.css" rel="stylesheet">
   </head>
 
   <body>
@@ -369,8 +367,9 @@
               <i class="material-icons chat-emoji" id="emoji-icon"
                 >insert_emoticon</i
               >
+              <div id="emoji-popup" class="emoji-popup">
+              </div>
               <input
-                data-emojiable="true"
                 type="text"
                 class="chat-message-input"
                 placeholder="Type something"
@@ -384,12 +383,6 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/emoji-button.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="lib/js/config.min.js"></script>
-    <script src="lib/js/util.min.js"></script>
-    <script src="lib/js/jquery.emojiarea.min.js"></script>
-    <script src="lib/js/emoji-picker.min.js"></script>
     <script>
       // Open file input when paperclip icon is clicked
       document
@@ -397,17 +390,35 @@
         .addEventListener("click", function () {
           document.getElementById("file-input").click();
         });
+      
+        const emojis = ['😀', '😂', '🥰', '😎', '😢'];
+      // Get elements
+      const emojiIcon = document.getElementById('emoji-icon');
+      const emojiPopup = document.getElementById('emoji-popup');
 
-        $(function () {
-        // Initializes and creates emoji set from sprite sheet
-        window.emojiPicker = new EmojiPicker({
-          emojiable_selector: '[data-emojiabletrue]',
-          assetsPath: 'lib/img/',
-          popupButtonClasses: 'fa fa-smile-o',
+      // Generate emoji buttons
+      emojis.forEach(emoji => {
+        const button = document.createElement('button');
+        button.innerText = emoji;
+        button.addEventListener('click', () => {
+          // Add emoji to input field when clicked
+          const chatBox = document.querySelector('.chat-message-input');
+          chatBox.value += emoji;
         });
+        emojiPopup.appendChild(button);
+      });
 
-        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
-        window.emojiPicker.discover();
+      // Toggle emoji popup
+      emojiIcon.addEventListener('click', () => {
+        const isVisible = emojiPopup.style.display === 'block';
+        emojiPopup.style.display = isVisible ? 'none' : 'block';
+      });
+
+      // Close emoji popup when clicking outside
+      document.addEventListener('click', (event) => {
+        if (!emojiPopup.contains(event.target) && event.target !== emojiIcon) {
+          emojiPopup.style.display = 'none';
+        }
       });
     </script>
   </body>
