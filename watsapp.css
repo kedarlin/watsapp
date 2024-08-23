@@ -102,14 +102,17 @@ p {
 }
 
 .left-chat-profile {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     object-fit: cover;
     border-radius: 50%;
 }
 
 .left-chat {
     padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 85%;
     cursor: pointer;
 }
