@@ -29,6 +29,39 @@
               >filter_list</i
             >
           </button>
+          <div class="filter-popup">
+            <p class="filter-popup-title">Filter chats by</p>
+            <div class="filter-popup-item">
+              <i class="material-icons search-icon" style="font-size: 20px"
+                >mark_unread_chat_alt</i
+              >
+              Unread
+            </div>
+            <div class="filter-popup-item">
+              <i class="material-icons search-icon" style="font-size: 20px"
+                >person</i
+              >
+              Contacts
+            </div>
+            <div class="filter-popup-item">
+              <i class="material-icons search-icon" style="font-size: 20px"
+                >manage_accounts</i
+              >
+              Non-Contacts
+            </div>
+            <div class="filter-popup-item">
+              <i class="material-icons search-icon" style="font-size: 20px"
+                >group</i
+              >
+              Groups
+            </div>
+            <div class="filter-popup-item">
+              <i class="material-icons search-icon" style="font-size: 20px"
+                >edit_note</i
+              >
+              Drafts
+            </div>
+          </div>
         </div>
         <div class="left-chat-section">
           <div class="left-pinned-chats">
@@ -257,9 +290,7 @@
                 Jack Raymonds
                 <p>10:30 PM</p>
               </div>
-              <div class="chat-body">
-                Hey Grace, how's it going?
-              </div>
+              <div class="chat-body">Hey Grace, how's it going?</div>
             </div>
           </div>
           <div class="chat-to">
@@ -270,8 +301,7 @@
                 <p>10:30 PM</p>
               </div>
               <div class="chat-body">
-                Hi Jack! I'm doing well, thanks. Can't wait for the
-                weekend!
+                Hi Jack! I'm doing well, thanks. Can't wait for the weekend!
               </div>
             </div>
           </div>
@@ -283,7 +313,8 @@
                 <p>10:30 PM</p>
               </div>
               <div class="chat-body">
-                I know, right? Weekend plans are the best. Any exciting plans on your end?
+                I know, right? Weekend plans are the best. Any exciting plans on
+                your end?
               </div>
             </div>
           </div>
@@ -295,7 +326,8 @@
                 <p>10:30 PM</p>
               </div>
               <div class="chat-body">
-                Absolutely! I'm thinking of going for a hike on Saturday. How about you?
+                Absolutely! I'm thinking of going for a hike on Saturday. How
+                about you?
               </div>
             </div>
           </div>
@@ -307,7 +339,8 @@
                 <p>10:30 PM</p>
               </div>
               <div class="chat-body">
-                Hiking sounds amazing! Imight catch up on some reading and also meet up with a few friends on Sunday.
+                Hiking sounds amazing! Imight catch up on some reading and also
+                meet up with a few friends on Sunday.
               </div>
             </div>
           </div>
@@ -330,9 +363,7 @@
                 Jack Raymonds
                 <p>10:30 PM</p>
               </div>
-              <div class="chat-body">
-                Can't wait for the weekend!
-              </div>
+              <div class="chat-body">Can't wait for the weekend!</div>
             </div>
           </div>
           <div class="chat-to">
@@ -342,9 +373,7 @@
                 Grace Miller
                 <p>10:30 PM</p>
               </div>
-              <div class="chat-body">
-                Okay see you around later!!!
-              </div>
+              <div class="chat-body">Okay see you around later!!!</div>
             </div>
           </div>
           <!-- Repeat chat-from and chat-to divs as needed -->
@@ -360,8 +389,7 @@
               <i class="material-icons chat-emoji" id="emoji-icon"
                 >insert_emoticon</i
               >
-              <div id="emoji-popup" class="emoji-popup">
-              </div>
+              <div id="emoji-popup" class="emoji-popup"></div>
               <input
                 type="text"
                 class="chat-message-input"
@@ -383,53 +411,144 @@
         .addEventListener("click", function () {
           document.getElementById("file-input").click();
         });
-      
-        const emojis = [
-  '😀', '😃', '😄', '😁', '😆',
-  '😅', '😂', '🤣', '😊', '😇',
-  '🙂', '🙃', '😉', '😌', '😍',
-  '😘', '😗', '😙', '😚', '😋',
-  '😎', '🤓', '😍', '🥰', '😏',
-  '😒', '😞', '😔', '😕', '🙁',
-  '☹️', '😣', '😖', '😫', '😩',
-  '😤', '😠', '😡', '🤬', '😈',
-  '👿', '💀', '☠️', '👻', '👽',
-  '😺', '😸', '😹', '😻', '😼',
-  '😽', '🙀', '😿', '😾', '👋',
-  '🤚', '🖐', '✋', '🖖', '👈',
-  '👉', '👆', '👐', '🤲', '🙏',
-  '👏', '🙌', '🤝', '👍', '👎',
-  '👊', '✊', '🤘', '🤙', '👋',
-  '💪', '🦵', '🦶', '👂', '🍆',
-  '🍇', '🍈', '🍉', '🍊', '🍋',
-  '🍌', '🍍', '🍎', '🍏', '🍑'
-];
+
+      const emojis = [
+        "😀",
+        "😃",
+        "😄",
+        "😁",
+        "😆",
+        "😅",
+        "😂",
+        "🤣",
+        "😊",
+        "😇",
+        "🙂",
+        "🙃",
+        "😉",
+        "😌",
+        "😍",
+        "😘",
+        "😗",
+        "😙",
+        "😚",
+        "😋",
+        "😎",
+        "🤓",
+        "😍",
+        "🥰",
+        "😏",
+        "😒",
+        "😞",
+        "😔",
+        "😕",
+        "🙁",
+        "☹️",
+        "😣",
+        "😖",
+        "😫",
+        "😩",
+        "😤",
+        "😠",
+        "😡",
+        "🤬",
+        "😈",
+        "👿",
+        "💀",
+        "☠️",
+        "👻",
+        "👽",
+        "😺",
+        "😸",
+        "😹",
+        "😻",
+        "😼",
+        "😽",
+        "🙀",
+        "😿",
+        "😾",
+        "👋",
+        "🤚",
+        "🖐",
+        "✋",
+        "🖖",
+        "👈",
+        "👉",
+        "👆",
+        "👐",
+        "🤲",
+        "🙏",
+        "👏",
+        "🙌",
+        "🤝",
+        "👍",
+        "👎",
+        "👊",
+        "✊",
+        "🤘",
+        "🤙",
+        "👋",
+        "💪",
+        "🦵",
+        "🦶",
+        "👂",
+        "🍆",
+        "🍇",
+        "🍈",
+        "🍉",
+        "🍊",
+        "🍋",
+        "🍌",
+        "🍍",
+        "🍎",
+        "🍏",
+        "🍑",
+      ];
       // Get elements
-      const emojiIcon = document.getElementById('emoji-icon');
-      const emojiPopup = document.getElementById('emoji-popup');
+      const emojiIcon = document.getElementById("emoji-icon");
+      const emojiPopup = document.getElementById("emoji-popup");
 
       // Generate emoji buttons
-      emojis.forEach(emoji => {
-        const button = document.createElement('button');
+      emojis.forEach((emoji) => {
+        const button = document.createElement("button");
         button.innerText = emoji;
-        button.addEventListener('click', () => {
+        button.addEventListener("click", () => {
           // Add emoji to input field when clicked
-          const chatBox = document.querySelector('.chat-message-input');
+          const chatBox = document.querySelector(".chat-message-input");
           chatBox.value += emoji;
         });
         emojiPopup.appendChild(button);
       });
 
       // Toggle emoji popup
-      emojiIcon.addEventListener('click', () => {
-        const isVisible = emojiPopup.style.display === 'block';
-        emojiPopup.style.display = isVisible ? 'none' : 'block';
+      emojiIcon.addEventListener("click", () => {
+        const isVisible = emojiPopup.style.display === "block";
+        emojiPopup.style.display = isVisible ? "none" : "block";
       });
 
       // Close emoji popup when clicking outside
-      document.addEventListener('click', (event) => {
+      document.addEventListener("click", (event) => {
         if (!emojiPopup.contains(event.target) && event.target !== emojiIcon) {
-          emojiPopup.style.display = 'none';
+          emojiPopup.style.display = "none";
+        }
+      });
+      const filterButton = document.querySelector(".chat-filter");
+      const popup = document.querySelector(".filter-popup");
+
+      // Toggle popup visibility on button click
+      filterButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents the click from propagating to the document
+        popup.style.display =
+          popup.style.display === "block" ? "none" : "block";
+      });
+
+      // Close popup if clicked outside
+      document.addEventListener("click", function (event) {
+        if (
+          !popup.contains(event.target) &&
+          !filterButton.contains(event.target)
+        ) {
+          popup.style.display = "none";
         }
       });
     </script>
