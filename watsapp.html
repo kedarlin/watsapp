@@ -58,15 +58,9 @@
           </div>
         </div>
         <div class="search-filter">
-          <div class="search-filter-item">
-            All
-          </div>
-          <div class="search-filter-item">
-            Unread
-          </div>
-          <div class="search-filter-item">
-              Groups
-          </div>
+          <div class="search-filter-item" id="search-filter-all">All</div>
+          <div class="search-filter-item" id="search-filter-unread">Unread</div>
+          <div class="search-filter-item" id="search-filter-groups">Groups</div>
         </div>
         <div class="left-chat-section">
           <div class="left-pinned-chats">
@@ -90,7 +84,7 @@
                 </div>
               </div>
             </div>
-            <div class="chat-overview">
+            <div class="chat-overview" id="chat-unread">
               <img src="dp.jpg" alt="" class="left-chat-profile" />
               <div class="left-chat">
                 <div class="left-chat-name">
@@ -99,7 +93,15 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="material-icons">check</i>
+                  <span
+                    style="
+                      background-color: #0084ff;
+                      color: white;
+                      padding: 0px 5px;
+                      border-radius: 25px;
+                    "
+                    >1</span
+                  >
                 </div>
               </div>
             </div>
@@ -133,7 +135,7 @@
               ALL MESSAGES
             </div>
             <!-- Chat Overview -->
-            <div class="chat-overview">
+            <div class="chat-overview" id="chat-unread">
               <img src="dp.jpg" alt="" class="left-chat-profile" />
               <div class="left-chat">
                 <div class="left-chat-name">
@@ -142,7 +144,15 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
-                  <i class="material-icons">check</i>
+                  <span
+                    style="
+                      background-color: #0084ff;
+                      color: white;
+                      padding: 0px 5px;
+                      border-radius: 25px;
+                    "
+                    >1</span
+                  >
                 </div>
               </div>
             </div>
@@ -165,7 +175,7 @@
                 </div>
               </div>
             </div>
-            <div class="chat-overview">
+            <div class="chat-overview" id="chat-unread">
               <img src="dp2.jpg" alt="" class="left-chat-profile" />
               <div class="left-chat">
                 <div class="left-chat-name">
@@ -391,34 +401,29 @@
             >
             <div class="attach-popup" id="attach-popup">
               <div class="attach-popup-item">
-                <i class="material-icons chat-emoji"
-                  >receipt</i
-                >
+                <i class="material-icons chat-emoji">receipt</i>
                 Invoice
               </div>
               <div class="attach-popup-item">
-                <i class="material-icons chat-emoji"
-                  >format_quote</i
-                >
+                <i class="material-icons chat-emoji">format_quote</i>
                 Quotes
               </div>
               <div class="attach-popup-item">
-                <i class="material-icons chat-emoji"
-                  >real_estate_agent</i
-                >
+                <i class="material-icons chat-emoji">real_estate_agent</i>
                 From Saleforce
               </div>
               <div class="attach-popup-item" id="attach-item-mydevice">
-                <input type="file" id="attach-mydevice" style="display: none;" multiple />
-                <i class="material-icons chat-emoji"
-                  >devices</i
-                >
+                <input
+                  type="file"
+                  id="attach-mydevice"
+                  style="display: none"
+                  multiple
+                />
+                <i class="material-icons chat-emoji">devices</i>
                 My Device
               </div>
               <div class="attach-popup-item">
-                <i class="material-icons chat-emoji"
-                  >menu_book</i
-                >
+                <i class="material-icons chat-emoji">menu_book</i>
                 From Ledger
               </div>
             </div>
@@ -450,7 +455,10 @@
         attachPopup.style.display = isVisible ? "none" : "block";
       });
       document.addEventListener("click", (event) => {
-        if (!attachPopup.contains(event.target) && event.target !== attachIcon) {
+        if (
+          !attachPopup.contains(event.target) &&
+          event.target !== attachIcon
+        ) {
           attachPopup.style.display = "none";
         }
       });
@@ -458,6 +466,26 @@
         .getElementById("attach-item-mydevice")
         .addEventListener("click", function () {
           document.getElementById("attach-mydevice").click();
+        });
+      document
+        .getElementById("search-filter-all")
+        .addEventListener("click", function () {
+          const chatArray = document.getElementsByClassName("chat-overview");
+          console.log(chatArray);
+          for(let i=0;i<chatArray.length;i++){
+            chatArray[i].style.display="flex";
+          }
+        });
+        document
+        .getElementById("search-filter-unread")
+        .addEventListener("click", function () {
+          const chatArray = document.getElementsByClassName("chat-overview");
+          console.log(chatArray);
+          for(let i=0;i< chatArray.length;i++){
+            if(chatArray[i].id!=="chat-unread"){
+              chatArray[i].style.display="none";
+            }
+          }
         });
       const emojis = [
         "😀",
@@ -604,7 +632,7 @@
       const chatMessageInput = document.getElementById("chatMessageInput");
       const chatContainer = document.getElementById("chat");
 
-      function appendMessage () {
+      function appendMessage() {
         const messageText = chatMessageInput.value.trim();
 
         if (messageText !== "") {
@@ -622,7 +650,10 @@
 
           const chatNameDiv = document.createElement("div");
           chatNameDiv.classList.add("chat-name");
-          chatNameDiv.innerHTML = `Jack Raymonds <p>${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>`;
+          chatNameDiv.innerHTML = `Jack Raymonds <p>${new Date().toLocaleTimeString(
+            [],
+            { hour: "2-digit", minute: "2-digit" }
+          )}</p>`;
 
           const chatBodyDiv = document.createElement("div");
           chatBodyDiv.classList.add("chat-body");
@@ -644,13 +675,13 @@
       }
       sendMessageButton.addEventListener("click", appendMessage);
 
-        // Listen for the "Enter" key press
-      chatMessageInput.addEventListener("keydown", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();  // Prevent the default behavior of Enter key (which may submit forms)
-                appendMessage();
-            }
-        });
+      // Listen for the "Enter" key press
+      chatMessageInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault(); // Prevent the default behavior of Enter key (which may submit forms)
+          appendMessage();
+        }
+      });
     </script>
   </body>
 </html>
