@@ -92,7 +92,7 @@
                   <p class="left-chat-time">8:30 PM</p>
                 </div>
                 <div class="left-chat-desc">
-                  i wish i knew you wanted me...
+                  Okay see you around later!!!
                   <span
                     style="
                       background-color: #0084ff;
@@ -105,15 +105,15 @@
                 </div>
               </div>
             </div>
-            <div class="chat-overview">
+            <div class="chat-overview" id="chat-groups">
               <img src="dp.jpg" alt="" class="left-chat-profile" />
               <div class="left-chat">
                 <div class="left-chat-name">
-                  Dare Devil
+                  Work Group
                   <p class="left-chat-time">8:30 PM</p>
                 </div>
                 <div class="left-chat-desc">
-                  i wish i knew you wanted me...
+                  Tomorrow everyone attend the meet...
                   <!-- <i class="material-icons">check</i> -->
                   <img
                     src="read.png"
@@ -205,6 +205,26 @@
                 </div>
                 <div class="left-chat-desc">
                   i wish i knew you wanted me...
+                  <!-- <i class="material-icons">check</i> -->
+                  <img
+                    src="read.png"
+                    alt="read-png"
+                    class="read-png"
+                    style="width: 14px"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div class="chat-overview" id="chat-groups">
+              <img src="dp.jpg" alt="" class="left-chat-profile" />
+              <div class="left-chat">
+                <div class="left-chat-name">
+                  Friends Forever
+                  <p class="left-chat-time">8:30 PM</p>
+                </div>
+                <div class="left-chat-desc">
+                  Homies got no butches
                   <!-- <i class="material-icons">check</i> -->
                   <img
                     src="read.png"
@@ -470,6 +490,9 @@
       document
         .getElementById("search-filter-all")
         .addEventListener("click", function () {
+          document.getElementById("search-filter-all").style.color="#0084ff";
+          document.getElementById("search-filter-unread").style.color="#000";
+          document.getElementById("search-filter-groups").style.color="#000";
           const chatArray = document.getElementsByClassName("chat-overview");
           for(let i=0;i<chatArray.length;i++){
             chatArray[i].style.display="flex";
@@ -478,10 +501,32 @@
         document
         .getElementById("search-filter-unread")
         .addEventListener("click", function () {
+          document.getElementById("search-filter-unread").style.color="#0084ff";
+          document.getElementById("search-filter-all").style.color="#000";
+          document.getElementById("search-filter-groups").style.color="#000";
           const chatArray = document.getElementsByClassName("chat-overview");
           for(let i=0;i< chatArray.length;i++){
             if(chatArray[i].id!=="chat-unread"){
               chatArray[i].style.display="none";
+            }
+            else{
+              chatArray[i].style.display="flex";
+            }
+          }
+        });
+        document
+        .getElementById("search-filter-groups")
+        .addEventListener("click", function () {
+          document.getElementById("search-filter-groups").style.color="#0084ff";
+          document.getElementById("search-filter-all").style.color="#000";
+          document.getElementById("search-filter-unread").style.color="#000";
+          const chatArray = document.getElementsByClassName("chat-overview");
+          for(let i=0;i< chatArray.length;i++){
+            if(chatArray[i].id!=="chat-groups"){
+              chatArray[i].style.display="none";
+            }
+            else{
+              chatArray[i].style.display="flex";
             }
           }
         });
