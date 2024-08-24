@@ -98,6 +98,22 @@ p {
 .filter-popup-item i{
     color: #898989;
 }
+.search-filter{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0px 20px;
+    font-size: 12px;
+}
+.search-filter-item{
+    padding: 3px 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search-filter-item:hover{
+    color: #0084ff;
+}
 .left-chat-section {
     display: flex;
     flex-direction: column;
