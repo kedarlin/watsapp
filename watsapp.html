@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="chat-overview" id="chat-groups">
-              <img src="dp.jpg" alt="" class="left-chat-profile" />
+              <img src="dp2.jpg" alt="" class="left-chat-profile" />
               <div class="left-chat">
                 <div class="left-chat-name">
                   Work Group
@@ -468,6 +468,10 @@
       </div>
     </div>
     <script>
+      // set chat from bottom
+      const chatCont = document.getElementById("chat");
+      chatCont.scrollTop = chatCont.scrollHeight;
+
       const attachIcon = document.getElementById("attach-icon");
       const attachPopup = document.getElementById("attach-popup");
       attachIcon.addEventListener("click", () => {
