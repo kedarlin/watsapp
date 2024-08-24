@@ -282,7 +282,7 @@
           </div>
         </div>
         <!-- Chat -->
-        <div class="chat">
+        <div class="chat" id="chat">
           <div class="chat-from">
             <img src="dp1.jpg" alt="" class="chat-profile" />
             <div class="chat-content">
@@ -393,11 +393,12 @@
               <input
                 type="text"
                 class="chat-message-input"
+                id="chatMessageInput"
                 placeholder="Type something"
               />
             </div>
           </div>
-          <button class="chat-enter">
+          <button class="chat-enter" id="sendMessageButton">
             Send
             <i class="material-icons chat-send" style="font-size: 20px">send</i>
           </button>
@@ -551,6 +552,59 @@
           popup.style.display = "none";
         }
       });
+
+      // Handle sending a message
+      const sendMessageButton = document.getElementById("sendMessageButton");
+      const chatMessageInput = document.getElementById("chatMessageInput");
+      const chatContainer = document.getElementById("chat");
+
+      function appendMessage () {
+        const messageText = chatMessageInput.value.trim();
+
+        if (messageText !== "") {
+          // Create chat message element
+          const chatToDiv = document.createElement("div");
+          chatToDiv.classList.add("chat-from");
+
+          const profileImg = document.createElement("img");
+          profileImg.src = "dp1.jpg";
+          profileImg.alt = "";
+          profileImg.classList.add("chat-profile");
+
+          const chatContentDiv = document.createElement("div");
+          chatContentDiv.classList.add("chat-content");
+
+          const chatNameDiv = document.createElement("div");
+          chatNameDiv.classList.add("chat-name");
+          chatNameDiv.innerHTML = `Jack Raymonds <p>${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>`;
+
+          const chatBodyDiv = document.createElement("div");
+          chatBodyDiv.classList.add("chat-body");
+          chatBodyDiv.textContent = messageText;
+
+          // Append elements
+          chatContentDiv.appendChild(chatNameDiv);
+          chatContentDiv.appendChild(chatBodyDiv);
+          chatToDiv.appendChild(profileImg);
+          chatToDiv.appendChild(chatContentDiv);
+          chatContainer.appendChild(chatToDiv);
+
+          // Scroll to the bottom of the chat container
+          chatContainer.scrollTop = chatContainer.scrollHeight;
+
+          // Clear the input field
+          chatMessageInput.value = "";
+        }
+      }
+      sendMessageButton.addEventListener("click", appendMessage);
+
+        // Listen for the "Enter" key press
+      chatMessageInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();  // Prevent the default behavior of Enter key (which may submit forms)
+                appendMessage();
+            }
+        });
     </script>
   </body>
 </html>
