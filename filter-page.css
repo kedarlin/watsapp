@@ -1,10 +1,9 @@
-body{
+body {
     margin: 0;
-}
-.wa-filter-page{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.wa-filter-nav{
+
+.wa-filter-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,7 +11,8 @@ body{
     border-bottom: 10px solid #4a4a98;
     padding-left: 20px;
 }
-.filter-nav-item{
+
+.filter-nav-item {
     padding: 5px 10px;
     display: flex;
     flex-direction: row;
@@ -20,38 +20,103 @@ body{
     gap: 10px;
     cursor: pointer;
 }
-.filter-nav-item:hover{
+
+.filter-nav-item:hover {
     background-color: #f5f1fd;
 }
-.current-nav-tab{
+
+.current-nav-tab {
     padding: 20px 50px;
     font-weight: 700;
     font-size: 20px;
     background-color: #f3f3f3;
 }
-.filter-tab{
+
+.filter-tab-outer {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+
+.filter-tab {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 25px;
+    margin: 15px 0;
 }
-.filter-tab-name{
+
+.filter-tab-name {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #303030;
+}
+
+.filter-input {
+    width: 350px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: #ccc 1px solid;
+    color: #8697a0;
     font-size: 14px;
 }
-.filter-input{
-    width: 350px;
+
+.filter-input::placeholder {
+    color: #8697a0;
 }
-.filter-input-1{
-    width: 250px;
+
+.filter-input-1 {
+    width: 262px;
 }
-.filter-tab-button{
+
+.filter-input,
+.filter-input-1 {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: #ccc 1px solid;
+    color: #8697a0;
+}
+
+.filter-tab-button {
     all: unset;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #4d3cea;
-    padding: 5px 10px;
+    background-color: #0084FF;
+    padding: 7px 10px;
     color: #fff;
+    margin-top: 20px;
     gap: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.contacts-box {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.contacts-title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #613337;
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contacts-table th {
+    width: 33.3%;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
 }
