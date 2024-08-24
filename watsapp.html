@@ -151,7 +151,7 @@
                       padding: 0px 5px;
                       border-radius: 25px;
                     "
-                    >1</span
+                    >3</span
                   >
                 </div>
               </div>
@@ -191,7 +191,7 @@
                       padding: 0px 5px;
                       border-radius: 25px;
                     "
-                    >1</span
+                    >5</span
                   >
                 </div>
               </div>
@@ -471,7 +471,6 @@
         .getElementById("search-filter-all")
         .addEventListener("click", function () {
           const chatArray = document.getElementsByClassName("chat-overview");
-          console.log(chatArray);
           for(let i=0;i<chatArray.length;i++){
             chatArray[i].style.display="flex";
           }
@@ -480,7 +479,6 @@
         .getElementById("search-filter-unread")
         .addEventListener("click", function () {
           const chatArray = document.getElementsByClassName("chat-overview");
-          console.log(chatArray);
           for(let i=0;i< chatArray.length;i++){
             if(chatArray[i].id!=="chat-unread"){
               chatArray[i].style.display="none";
