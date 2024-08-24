@@ -386,7 +386,6 @@
 
         <div class="chat-message">
           <div class="chat-left">
-            <input type="file" id="file-input" style="display: none" multiple />
             <i class="material-icons chat-attach" id="attach-icon"
               >attach_file</i
             >
@@ -443,12 +442,12 @@
       </div>
     </div>
     <script>
-      // Open file input when paperclip icon is clicked
-      document
-        .getElementById("attach-icon")
-        .addEventListener("click", function () {
-          document.getElementById("file-input").click();
-        });
+      const attachIcon = document.getElementById("attach-icon");
+      const attachPopup = document.getElementById("attach-popup");
+      attachIcon.addEventListener("click", () => {
+        const isVisible = attachPopup.style.display === "block";
+        attachPopup.style.display = isVisible ? "none" : "block";
+      });
 
       const emojis = [
         "😀",
