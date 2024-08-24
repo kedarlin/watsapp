@@ -408,7 +408,8 @@
                 >
                 From Saleforce
               </div>
-              <div class="attach-popup-item">
+              <div class="attach-popup-item" id="attach-item-mydevice">
+                <input type="file" id="attach-mydevice" style="display: none;" multiple />
                 <i class="material-icons chat-emoji" id="emoji-icon"
                   >devices</i
                 >
@@ -449,6 +450,11 @@
         attachPopup.style.display = isVisible ? "none" : "block";
       });
 
+      document
+        .getElementById("attach-item-mydevice")
+        .addEventListener("click", function () {
+          document.getElementById("attach-mydevice").click();
+        });
       const emojis = [
         "😀",
         "😃",
