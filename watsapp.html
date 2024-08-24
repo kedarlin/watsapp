@@ -449,7 +449,11 @@
         const isVisible = attachPopup.style.display === "block";
         attachPopup.style.display = isVisible ? "none" : "block";
       });
-
+      document.addEventListener("click", (event) => {
+        if (!attachPopup.contains(event.target) && event.target !== attachIcon) {
+          attachPopup.style.display = "none";
+        }
+      });
       document
         .getElementById("attach-item-mydevice")
         .addEventListener("click", function () {
