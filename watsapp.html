@@ -421,15 +421,15 @@
             >
             <div class="attach-popup" id="attach-popup">
               <div class="attach-popup-item">
-                <i class="material-icons chat-emoji">receipt</i>
-                Invoice
-              </div>
-              <div class="attach-popup-item">
-                <i class="material-icons chat-emoji">format_quote</i>
+                <i class="material-icons">attach_file</i>
                 Quotes
               </div>
               <div class="attach-popup-item">
-                <i class="material-icons chat-emoji">real_estate_agent</i>
+                <i class="material-icons">attach_file</i>
+                Invoice
+              </div>
+              <div class="attach-popup-item">
+                <i class="material-icons">attach_file</i>
                 From Saleforce
               </div>
               <div class="attach-popup-item" id="attach-item-mydevice">
@@ -439,11 +439,11 @@
                   style="display: none"
                   multiple
                 />
-                <i class="material-icons chat-emoji">devices</i>
+                <i class="material-icons chat-emoji">attach_file</i>
                 My Device
               </div>
               <div class="attach-popup-item">
-                <i class="material-icons chat-emoji">menu_book</i>
+                <i class="material-icons chat-emoji">attach_file</i>
                 From Ledger
               </div>
             </div>
@@ -453,11 +453,14 @@
               >
               <div id="emoji-popup" class="emoji-popup"></div>
               <input
-                type="text"
-                class="chat-message-input"
-                id="chatMessageInput"
-                placeholder="Type something"
+              type="text"
+              class="chat-message-input"
+              id="chatMessageInput"
+              placeholder="Type something"
               />
+              <i class="material-icons chat-emoji"
+                >mic</i
+              >
             </div>
           </div>
           <button class="chat-enter" id="sendMessageButton">

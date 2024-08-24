@@ -35,6 +35,9 @@ body{
     align-items: center;
     gap: 25px;
 }
+.filter-tab-name{
+    font-size: 14px;
+}
 .filter-input{
     width: 350px;
 }
