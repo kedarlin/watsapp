@@ -442,7 +442,7 @@
                 <i class="material-icons chat-emoji">attach_file</i>
                 My Device
               </div>
-              <div class="attach-popup-item">
+              <div class="attach-popup-item" id="attach-item-ledger">
                 <i class="material-icons chat-emoji">attach_file</i>
                 From Ledger
               </div>
@@ -453,7 +453,7 @@
                   type="text"
                   id="document-input"
                   class="document-popup-input"
-                  placeholder="enter chat name"
+                  placeholder="enter file name"
                 />
                 <div class="document-row">
                   <div class="document">
@@ -604,7 +604,7 @@
                     type="text"
                     id="salesforce-input"
                     class="salesforce-input"
-                    placeholder="enter chat name"
+                    placeholder="enter file name"
                   />
                   <input
                     type="date"
@@ -651,7 +651,7 @@
                     <th>12/4/2024</th>
                     <th>200</th>
                     <th>processing</th>
-                    <th>pedning</th>
+                    <th>pending</th>
                     <th><i class="material-icons chat-send" style="font-size: 20px; background-color: #0084ff;cursor: pointer; padding: 5px; border-radius: 5px;color: #fff">send</i></th>
                   </i<>
                   <tr>
@@ -679,12 +679,91 @@
                     <th>12/4/2024</th>
                     <th>200</th>
                     <th>processing</th>
-                    <th>pedning</th>
+                    <th>pending</th>
                     <th><i class="material-icons chat-send" style="font-size: 20px; background-color: #0084ff;cursor: pointer; padding: 5px; border-radius: 5px;color: #fff">send</i></th>
                   </tr>
                 </table>
               </div>
             </div>
+            <div class="ledger-popup" id="ledger-popup">
+              <div class="ledger-popup-window">
+                <div class="ledger-input-row">
+                  <label class="ledger-label">From </label>
+                  <input
+                    type="date"
+                    id="ledger-input"
+                    class="ledger-input"
+                    placeholder="enter date"
+                  />
+                  <label class="ledger-label">To </label>
+                  <input
+                    type="date"
+                    id="ledger-input"
+                    class="ledger-input"
+                    placeholder="status"
+                  />
+                </div>
+                <table class="ledger-table">
+                  <tr>
+                    <th>
+                      <input
+                        type="checkbox"
+                        id="all-contacts"
+                        style="margin-right: 10px"
+                      />Invoice Number
+                    </th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Pending</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        class="contacts"
+                        style="margin-right: 10px"
+                      />Enama4612
+                    </td>
+                    <th>12/4/2024</th>
+                    <th>200</th>
+                    <th>processing</th>
+                    <th>pending</th>
+                    <th><i class="material-icons chat-send" style="font-size: 20px; background-color: #0084ff;cursor: pointer; padding: 5px; border-radius: 5px;color: #fff">send</i></th>
+                  </i<>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        class="contacts"
+                        style="margin-right: 10px"
+                      />Enama4643
+                    </td>
+                    <th>10/8/2024</th>
+                    <th>790</th>
+                    <th>delivered</th>
+                    <th>completed</th>
+                    <th><i class="material-icons chat-send" style="font-size: 20px; background-color: #0084ff;cursor: pointer; padding: 5px; border-radius: 5px;color: #fff">send</i></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        class="contacts"
+                        style="margin-right: 10px"
+                      />Enama4612
+                    </td>
+                    <th>12/4/2024</th>
+                    <th>200</th>
+                    <th>processing</th>
+                    <th>pending</th>
+                    <th><i class="material-icons chat-send" style="font-size: 20px; background-color: #0084ff;cursor: pointer; padding: 5px; border-radius: 5px;color: #fff">send</i></th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
             <div class="chat-box">
               <i class="material-icons chat-emoji" id="emoji-icon"
                 >insert_emoticon</i
@@ -782,6 +861,7 @@
       // Function to show the popup
       function showPopup() {
         documentPopup.style.display = "block";
+        attachPopup.style.display = "none";
       }
 
       // Add event listeners to both buttons
@@ -802,6 +882,7 @@
       const salefrocePopup = document.getElementById("salesforce-popup");
       salesforceAttach.addEventListener("click", function() {
         salefrocePopup.style.display="block";
+        attachPopup.style.display = "none";
       })
       document.addEventListener("click", (event) => {
         if (
@@ -811,6 +892,22 @@
           salefrocePopup.style.display = "none";
         }
       });
+      
+      const ledgerAttach = document.getElementById("attach-item-ledger");
+      const ledgerPopup = document.getElementById("ledger-popup");
+      ledgerAttach.addEventListener("click", function() {
+        ledgerPopup.style.display="block";
+        attachPopup.style.display = "none";
+      })
+      document.addEventListener("click", (event) => {
+        if (
+          !ledgerAttach.contains(event.target) &&
+          !ledgerPopup.contains(event.target)
+        ) {
+          ledgerPopup.style.display = "none";
+        }
+      });
+
       const emojis = [
         "😀",
         "😃",
