@@ -82,6 +82,7 @@ body::-webkit-scrollbar{
     border-radius: 10px;
     border: #ccc 1px solid;
     color: #8697a0;
+    background-color: #fff;
 }
 
 .filter-tab-button {
