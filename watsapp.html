@@ -428,7 +428,7 @@
                 <i class="material-icons">attach_file</i>
                 Invoice
               </div>
-              <div class="attach-popup-item">
+              <div class="attach-popup-item" id="attach-item-salesforce">
                 <i class="material-icons">attach_file</i>
                 From Saleforce
               </div>
@@ -598,6 +598,65 @@
                 </div>
               </div>
             </div>
+            <div class="salesforce-popup" id="salesforce-popup">
+              <div class="salesforce-popup-title">Surya Conect : Madhu</div>
+              <div class="salesforce-popup-window">
+                <div class="saleforce-input-row">
+                  <input
+                    type="text"
+                    id="salesforce-input"
+                    class="salesforce-input"
+                    placeholder="enter chat name"
+                  />
+                  <input
+                    type="date"
+                    id="salesforce-input"
+                    class="salesforce-input"
+                    placeholder="enter date"
+                  />
+                  <input
+                    type="text"
+                    id="salesforce-input"
+                    class="salesforce-input"
+                    placeholder="status"
+                  />
+                  <input
+                    type="text"
+                    id="salesforce-input"
+                    class="salesforce-input"
+                    placeholder="pending"
+                  />
+                </div>
+                <table class="salesforce-table">
+                  <tr>
+                    <th>
+                      <input
+                        type="checkbox"
+                        id="all-contacts"
+                        style="margin-right: 10px"
+                      />Invoice Number
+                    </th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Pending</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="checkbox"
+                        class="contacts"
+                        style="margin-right: 10px"
+                      />Enama4612
+                    </td>
+                    <th>12/4/2024</th>
+                    <th>200</th>
+                    <th>processing</th>
+                    <th>pedning</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
             <div class="chat-box">
               <i class="material-icons chat-emoji" id="emoji-icon"
                 >insert_emoticon</i
@@ -711,7 +770,19 @@
           documentPopup.style.display = "none";
         }
       });
-      
+      const salesforceAttach = document.getElementById("attach-item-salesforce");
+      const salefrocePopup = document.getElementById("salesforce-popup");
+      salesforceAttach.addEventListener("click", function() {
+        salefrocePopup.style.display="block";
+      })
+      document.addEventListener("click", (event) => {
+        if (
+          !salesforceAttach.contains(event.target) &&
+          !salefrocePopup.contains(event.target)
+        ) {
+          salefrocePopup.style.display = "none";
+        }
+      });
       const emojis = [
         "😀",
         "😃",
