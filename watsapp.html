@@ -215,7 +215,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="chat-overview" id="chat-groups">
               <img src="dp.jpg" alt="" class="left-chat-profile" />
               <div class="left-chat">
@@ -420,11 +420,11 @@
               >attach_file</i
             >
             <div class="attach-popup" id="attach-popup">
-              <div class="attach-popup-item">
+              <div class="attach-popup-item" id="attach-item-document-1">
                 <i class="material-icons">attach_file</i>
                 Quotes
               </div>
-              <div class="attach-popup-item">
+              <div class="attach-popup-item" id="attach-item-document-2">
                 <i class="material-icons">attach_file</i>
                 Invoice
               </div>
@@ -447,20 +447,169 @@
                 From Ledger
               </div>
             </div>
+            <div class="document-popup" id="document-popup">
+              <div class="document-popup-title">Surya Conect : Madhu</div>
+              <div class="document-popup-window">
+                <input
+                  type="text"
+                  id="document-input"
+                  class="document-popup-input"
+                  placeholder="enter chat name"
+                />
+                <div class="document-row">
+                  <div class="document">
+                    <img src="pdf-img.png" alt="pdf-img" style="width: 40px" />
+                    <br />
+                    abc.pdf
+                  </div>
+                  <div class="document" style="margin-left: 60px">
+                    <img
+                      src="dropbox-img.png"
+                      alt="pdf-img"
+                      style="width: 48px"
+                    />
+                    <br />
+                    abec.jpg
+                  </div>
+                  <div class="document">
+                    <img
+                      src="house-img.png"
+                      alt="pdf-img"
+                      style="width: 40px; margin-left: 40px"
+                    />
+                    <br />
+                  </div>
+                  <div class="document">
+                    <img src="ppt-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    abc.ppt
+                  </div>
+                  <div class="document">
+                    <img src="word-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    axyz.docx
+                  </div>
+                  <div class="document">
+                    <img
+                      src="excel-img.png"
+                      alt="pdf-img"
+                      style="width: 48px"
+                    />
+                    <br />
+                    abec.xls
+                  </div>
+                  <div class="document">
+                    <img
+                      src="house-img.png"
+                      alt="pdf-img"
+                      style="width: 40px; margin-left: 40px"
+                    />
+                    <br />
+                  </div>
+                  <div class="document">
+                    <img src="ppt-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    abc.ppt
+                  </div>
+                  <div class="document">
+                    <img src="word-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    axyz.docx
+                  </div>
+                  <div class="document">
+                    <img
+                      src="excel-img.png"
+                      alt="pdf-img"
+                      style="width: 48px"
+                    />
+                    <br />
+                    abec.xls
+                  </div>
+                </div>
+                <div class="document-row">
+                  <div class="document">
+                    <img src="pdf-img.png" alt="pdf-img" style="width: 40px" />
+                    <br />
+                    abc.pdf
+                  </div>
+                  <div class="document" style="margin-left: 60px">
+                    <img
+                      src="dropbox-img.png"
+                      alt="pdf-img"
+                      style="width: 48px"
+                    />
+                    <br />
+                    abec.jpg
+                  </div>
+                  <div class="document">
+                    <img
+                      src="house-img.png"
+                      alt="pdf-img"
+                      style="width: 40px; margin-left: 40px"
+                    />
+                    <br />
+                  </div>
+                  <div class="document">
+                    <img src="ppt-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    abc.ppt
+                  </div>
+                  <div class="document">
+                    <img src="word-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    axyz.docx
+                  </div>
+                  <div class="document">
+                    <img
+                      src="excel-img.png"
+                      alt="pdf-img"
+                      style="width: 48px"
+                    />
+                    <br />
+                    abec.xls
+                  </div>
+                  <div class="document">
+                    <img
+                      src="house-img.png"
+                      alt="pdf-img"
+                      style="width: 40px; margin-left: 40px"
+                    />
+                    <br />
+                  </div>
+                  <div class="document">
+                    <img src="ppt-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    abc.ppt
+                  </div>
+                  <div class="document">
+                    <img src="word-img.png" alt="pdf-img" style="width: 48px" />
+                    <br />
+                    axyz.docx
+                  </div>
+                  <div class="document">
+                    <img
+                      src="excel-img.png"
+                      alt="pdf-img"
+                      style="width: 48px"
+                    />
+                    <br />
+                    abec.xls
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="chat-box">
               <i class="material-icons chat-emoji" id="emoji-icon"
                 >insert_emoticon</i
               >
               <div id="emoji-popup" class="emoji-popup"></div>
               <input
-              type="text"
-              class="chat-message-input"
-              id="chatMessageInput"
-              placeholder="Type something"
+                type="text"
+                class="chat-message-input"
+                id="chatMessageInput"
+                placeholder="Type something"
               />
-              <i class="material-icons chat-emoji"
-                >mic</i
-              >
+              <i class="material-icons chat-emoji">mic</i>
             </div>
           </div>
           <button class="chat-enter" id="sendMessageButton">
@@ -497,46 +646,72 @@
       document
         .getElementById("search-filter-all")
         .addEventListener("click", function () {
-          document.getElementById("search-filter-all").style.color="#0084ff";
-          document.getElementById("search-filter-unread").style.color="#000";
-          document.getElementById("search-filter-groups").style.color="#000";
+          document.getElementById("search-filter-all").style.color = "#0084ff";
+          document.getElementById("search-filter-unread").style.color = "#000";
+          document.getElementById("search-filter-groups").style.color = "#000";
           const chatArray = document.getElementsByClassName("chat-overview");
-          for(let i=0;i<chatArray.length;i++){
-            chatArray[i].style.display="flex";
+          for (let i = 0; i < chatArray.length; i++) {
+            chatArray[i].style.display = "flex";
           }
         });
-        document
+      document
         .getElementById("search-filter-unread")
         .addEventListener("click", function () {
-          document.getElementById("search-filter-unread").style.color="#0084ff";
-          document.getElementById("search-filter-all").style.color="#000";
-          document.getElementById("search-filter-groups").style.color="#000";
+          document.getElementById("search-filter-unread").style.color =
+            "#0084ff";
+          document.getElementById("search-filter-all").style.color = "#000";
+          document.getElementById("search-filter-groups").style.color = "#000";
           const chatArray = document.getElementsByClassName("chat-overview");
-          for(let i=0;i< chatArray.length;i++){
-            if(chatArray[i].id!=="chat-unread"){
-              chatArray[i].style.display="none";
-            }
-            else{
-              chatArray[i].style.display="flex";
+          for (let i = 0; i < chatArray.length; i++) {
+            if (chatArray[i].id !== "chat-unread") {
+              chatArray[i].style.display = "none";
+            } else {
+              chatArray[i].style.display = "flex";
             }
           }
         });
-        document
+      document
         .getElementById("search-filter-groups")
         .addEventListener("click", function () {
-          document.getElementById("search-filter-groups").style.color="#0084ff";
-          document.getElementById("search-filter-all").style.color="#000";
-          document.getElementById("search-filter-unread").style.color="#000";
+          document.getElementById("search-filter-groups").style.color =
+            "#0084ff";
+          document.getElementById("search-filter-all").style.color = "#000";
+          document.getElementById("search-filter-unread").style.color = "#000";
           const chatArray = document.getElementsByClassName("chat-overview");
-          for(let i=0;i< chatArray.length;i++){
-            if(chatArray[i].id!=="chat-groups"){
-              chatArray[i].style.display="none";
-            }
-            else{
-              chatArray[i].style.display="flex";
+          for (let i = 0; i < chatArray.length; i++) {
+            if (chatArray[i].id !== "chat-groups") {
+              chatArray[i].style.display = "none";
+            } else {
+              chatArray[i].style.display = "flex";
             }
           }
         });
+
+      // Get references to the elements
+      const attachDocument1 = document.getElementById("attach-item-document-1");
+      const attachDocument2 = document.getElementById("attach-item-document-2");
+      const documentPopup = document.getElementById("document-popup");
+
+      // Function to show the popup
+      function showPopup() {
+        documentPopup.style.display = "block";
+      }
+
+      // Add event listeners to both buttons
+      attachDocument1.addEventListener("click", showPopup);
+      attachDocument2.addEventListener("click", showPopup);
+
+      // Close the popup if clicking outside of it
+      document.addEventListener("click", (event) => {
+        if (
+          !attachDocument1.contains(event.target) &&
+          !attachDocument2.contains(event.target) &&
+          !documentPopup.contains(event.target)
+        ) {
+          documentPopup.style.display = "none";
+        }
+      });
+      
       const emojis = [
         "😀",
         "😃",

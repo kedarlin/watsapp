@@ -442,3 +442,43 @@ p {
     cursor: pointer;
     padding: 5px 10px;
 }
+
+.document-popup{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    background-color:#fff;
+    width: 99.9%;
+    color: #000;
+    z-index: 10;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.document-popup-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.document-popup-window{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+.document-popup-input{
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+.document-row{
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    padding: 10px;
+    font-size: 14px;
+}
+.document{
+    margin-left: 30px;
+}
