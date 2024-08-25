@@ -454,11 +454,6 @@ p {
     z-index: 10;
     /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
 }
-.document-popup-title, .salesforce-popup-title{
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 20px;
-}
 .document-popup-window, .salesforce-popup-window{
     display: flex;
     flex-direction: column;

@@ -50,33 +50,26 @@ body::-webkit-scrollbar{
     gap: 25px;
     margin: 15px 0;
 }
-
+.filter-tab-inputs{
+    width: 22%;
+}
+.filter-tab-inputs-1{
+    width: 16%;
+}
 .filter-tab-name {
     margin-left: 10px;
     font-size: 12px;
     color: #303030;
 }
 
-.filter-input {
-    width: 350px;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 10px;
-    border: #ccc 1px solid;
-    color: #8697a0;
-    font-size: 14px;
-}
-
 .filter-input::placeholder {
     color: #8697a0;
 }
 
-.filter-input-1 {
-    width: 261px;
-}
-
 .filter-input,
-.filter-input-1 {
+.filter-input-1,
+.filter-input-text {
+    width: 100%;
     padding: 10px;
     margin-top: 5px;
     border-radius: 10px;
@@ -84,7 +77,9 @@ body::-webkit-scrollbar{
     color: #8697a0;
     background-color: #fff;
 }
-
+.filter-input-text {
+    width: 93%;
+}
 .filter-tab-button {
     all: unset;
     display: flex;
