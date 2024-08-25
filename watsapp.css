@@ -481,4 +481,5 @@ p {
 }
 .document{
     margin-left: 30px;
+    cursor: pointer;
 }
