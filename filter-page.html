@@ -29,120 +29,124 @@
 
       <!-- <div class="current-nav-tab">WA Campaign</div> -->
       <div class="filter-tab-outer" style="margin-top: 20px">
-        <div class="filter-tab-title" style="font-size: 16px; font-weight: 500">
-          Messages
+
+        <div>
+          <div class="filter-tab-title" style="font-size: 16px; font-weight: 500">
+            Messages
+          </div>
+          <div class="filter-tab">
+            <div class="filter-tab-inputs">
+              <div class="filter-tab-name">Type</div>
+              <select
+                name="campaign-type"
+                id="campaign-type"
+                class="filter-input"
+              >
+                <option value="new-campaign">New Campaign</option>
+                <option value="old-campaign">Old Campaign</option>
+                <option value="left-campaign">Left Campaign</option>
+                <option value="right-campaign">Right Campaign</option>
+              </select>
+            </div>
+            <div class="filter-tab-inputs">
+              <div class="filter-tab-name">Campaign Name</div>
+              <input
+                type="text"
+                name="campaign-type"
+                id="campaign-type"
+                class="filter-input-text"
+                placeholder="Enter campaign name"
+              />
+            </div>
+            <div class="filter-tab-inputs">
+              <div class="filter-tab-name">Select Template</div>
+              <select
+                name="campaign-type"
+                id="campaign-type"
+                class="filter-input"
+              >
+                <option value="">select Template</option>
+                <option value="new-campaign">New Template</option>
+                <option value="old-campaign">Old Template</option>
+                <option value="left-campaign">Left Template</option>
+                <option value="right-campaign">Right Template</option>
+              </select>
+            </div>
+            <button class="filter-tab-button">
+              <i class="material-icons tab-send" style="font-size: 20px">send</i>
+              Send
+            </button>
+          </div>
         </div>
-        <div class="filter-tab">
-          <div class="filter-tab-inputs">
-            <div class="filter-tab-name">Type</div>
-            <select
-              name="campaign-type"
-              id="campaign-type"
-              class="filter-input"
-            >
-              <option value="new-campaign">New Campaign</option>
-              <option value="old-campaign">Old Campaign</option>
-              <option value="left-campaign">Left Campaign</option>
-              <option value="right-campaign">Right Campaign</option>
-            </select>
+  
+        <div style="margin-top: 20px">
+          <div class="filter-tab-title" style="font-size: 16px; font-weight: 500">
+            Filters
           </div>
-          <div class="filter-tab-inputs">
-            <div class="filter-tab-name">Campaign Name</div>
-            <input
-              type="text"
-              name="campaign-type"
-              id="campaign-type"
-              class="filter-input-text"
-              placeholder="Enter campaign name"
-            />
+          <div class="filter-tab">
+            <div class="filter-tab-inputs-1">
+              <div class="filter-tab-name">Customer Type</div>
+              <select
+                name="campaign-type"
+                id="campaign-type"
+                class="filter-input-1"
+              >
+                <option value="">Choose value</option>
+                <option value="new-campaign">New Campaign</option>
+                <option value="old-campaign">Old Campaign</option>
+                <option value="left-campaign">Left Campaign</option>
+                <option value="right-campaign">Right Campaign</option>
+              </select>
+            </div>
+            <div class="filter-tab-inputs-1">
+              <div class="filter-tab-name">Outstanding age</div>
+              <select
+                name="campaign-type"
+                id="campaign-type"
+                class="filter-input-1"
+              >
+                <option value="">select value</option>
+                <option value="new-campaign">New Template</option>
+                <option value="old-campaign">Old Template</option>
+                <option value="left-campaign">Left Template</option>
+                <option value="right-campaign">Right Template</option>
+              </select>
+            </div>
+            <div class="filter-tab-inputs-1">
+              <div class="filter-tab-name">Last billed</div>
+              <select
+                name="campaign-type"
+                id="campaign-type"
+                class="filter-input-1"
+              >
+                <option value="">select value</option>
+                <option value="new-campaign">New Template</option>
+                <option value="old-campaign">Old Template</option>
+                <option value="left-campaign">Left Template</option>
+                <option value="right-campaign">Right Template</option>
+              </select>
+            </div>
+            <div class="filter-tab-inputs-1">
+              <div class="filter-tab-name">Product Category</div>
+              <select
+                name="campaign-type"
+                id="campaign-type"
+                class="filter-input-1"
+              >
+                <option value="">select Category</option>
+                <option value="new-campaign">New Template</option>
+                <option value="old-campaign">Old Template</option>
+                <option value="left-campaign">Left Template</option>
+                <option value="right-campaign">Right Template</option>
+              </select>
+            </div>
+            <button class="filter-tab-button">
+              <i class="material-icons tab-send" style="font-size: 20px"
+                >filter_alt</i
+              >
+              Apply Filter
+            </button>
           </div>
-          <div class="filter-tab-inputs">
-            <div class="filter-tab-name">Select Template</div>
-            <select
-              name="campaign-type"
-              id="campaign-type"
-              class="filter-input"
-            >
-              <option value="">select Template</option>
-              <option value="new-campaign">New Template</option>
-              <option value="old-campaign">Old Template</option>
-              <option value="left-campaign">Left Template</option>
-              <option value="right-campaign">Right Template</option>
-            </select>
-          </div>
-          <button class="filter-tab-button">
-            <i class="material-icons tab-send" style="font-size: 20px">send</i>
-            Send
-          </button>
-        </div>
-      </div>
-      <div class="filter-tab-outer" style="margin-top: 20px">
-        <div class="filter-tab-title" style="font-size: 16px; font-weight: 500">
-          Filters
-        </div>
-        <div class="filter-tab">
-          <div class="filter-tab-inputs-1">
-            <div class="filter-tab-name">Customer Type</div>
-            <select
-              name="campaign-type"
-              id="campaign-type"
-              class="filter-input-1"
-            >
-              <option value="">Choose value</option>
-              <option value="new-campaign">New Campaign</option>
-              <option value="old-campaign">Old Campaign</option>
-              <option value="left-campaign">Left Campaign</option>
-              <option value="right-campaign">Right Campaign</option>
-            </select>
-          </div>
-          <div class="filter-tab-inputs-1">
-            <div class="filter-tab-name">Outstanding age</div>
-            <select
-              name="campaign-type"
-              id="campaign-type"
-              class="filter-input-1"
-            >
-              <option value="">select value</option>
-              <option value="new-campaign">New Template</option>
-              <option value="old-campaign">Old Template</option>
-              <option value="left-campaign">Left Template</option>
-              <option value="right-campaign">Right Template</option>
-            </select>
-          </div>
-          <div class="filter-tab-inputs-1">
-            <div class="filter-tab-name">Last billed</div>
-            <select
-              name="campaign-type"
-              id="campaign-type"
-              class="filter-input-1"
-            >
-              <option value="">select value</option>
-              <option value="new-campaign">New Template</option>
-              <option value="old-campaign">Old Template</option>
-              <option value="left-campaign">Left Template</option>
-              <option value="right-campaign">Right Template</option>
-            </select>
-          </div>
-          <div class="filter-tab-inputs-1">
-            <div class="filter-tab-name">Product Category</div>
-            <select
-              name="campaign-type"
-              id="campaign-type"
-              class="filter-input-1"
-            >
-              <option value="">select Category</option>
-              <option value="new-campaign">New Template</option>
-              <option value="old-campaign">Old Template</option>
-              <option value="left-campaign">Left Template</option>
-              <option value="right-campaign">Right Template</option>
-            </select>
-          </div>
-          <button class="filter-tab-button">
-            <i class="material-icons tab-send" style="font-size: 20px"
-              >filter_alt</i
-            >
-            Apply Filter
-          </button>
         </div>
       </div>
       <div class="contacts-box">
@@ -164,7 +168,7 @@
                 type="checkbox"
                 id="all-contacts"
                 style="margin-right: 10px"
-              />Contacts
+              />
             </th>
             <th class="contacts-col">Mobile</th>
             <th class="contacts-col">Company</th>
