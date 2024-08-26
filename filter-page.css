@@ -97,16 +97,16 @@ body::-webkit-scrollbar{
     margin-top: 20px;
     padding: 20px;
 }
-
+/* 
 .contacts-title {
     text-align: center;
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: 700;
     color: #760204;
-}
+} */
 
-.contacts-table {
+/* .contacts-table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -127,4 +127,68 @@ td {
 }
 td:nth-child(1){
     background-color: #fff;
+} */
+.contacts-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.contacts-table th, .contacts-table td {
+    width: 33.3%;
+    background-color: #f3f3f3;
+    border: none;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contacts-table th:last-child, .contacts-table td:last-child {
+    border-right: none;
+}
+
+.contacts-table td {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.contacts-table td:nth-child(1) {
+    background-color: #fff;
+}
+
+.contacts-table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.contacts-table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.contacts-table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.contacts-table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+.contacts-table tr:last-child td{
+    border: none;
+}
+.contacts-table tr td:nth-child(2){
+    border-left: #ccc 1px solid;
+}
+.contacts-table tr td:nth-child(3){
+    border-left: #ccc 1px solid;
+}
+.contacts-table th td:nth-child(2){
+    border-left: #ccc 1px solid;
+}
+.contacts-table th td:nth-child(3){
+    border-left: #ccc 1px solid;
 }
