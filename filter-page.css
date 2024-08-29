@@ -3,7 +3,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-y: scroll;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -21,12 +22,15 @@ body::-webkit-scrollbar{
     gap: 25px;
     margin: 15px 0;
 }
-.filter-tab-inputs{
+
+.filter-tab-inputs {
     width: 27.2%;
 }
-.filter-tab-inputs-1{
+
+.filter-tab-inputs-1 {
     width: 20%;
 }
+
 .filter-tab-name {
     margin-left: 10px;
     font-size: 12px;
@@ -48,9 +52,11 @@ body::-webkit-scrollbar{
     color: #8697a0;
     background-color: #fff;
 }
+
 .filter-input-text {
     width: 93%;
 }
+
 .filter-tab-button {
     all: unset;
     display: flex;
@@ -68,9 +74,9 @@ body::-webkit-scrollbar{
 }
 
 .contacts-box {
-    margin-top: 20px;
     padding: 20px;
 }
+
 .contacts-table {
     width: 100%;
     border-collapse: separate;
@@ -80,7 +86,8 @@ body::-webkit-scrollbar{
     overflow: hidden;
 }
 
-.contacts-table th, .contacts-table td {
+.contacts-table th,
+.contacts-table td {
     width: 33.3%;
     color: #fff;
     border: none;
@@ -90,19 +97,23 @@ body::-webkit-scrollbar{
     border-bottom: 1px solid #ccc;
 }
 
-.contacts-table th:last-child, .contacts-table td:last-child {
+.contacts-table th:last-child,
+.contacts-table td:last-child {
     border-right: none;
 }
-.contacts-table th{
+
+.contacts-table th {
     background-color: #0084FF;
     font-weight: 400;
     font-size: 16px;
 }
+
 .contacts-table td {
-    font-size: 12px;
+    font-size: 14px;
     color: #8398c1;
     font-weight: 500;
 }
+
 .contacts-table tr:first-child th:first-child {
     border-top-left-radius: 10px;
 }
@@ -118,15 +129,17 @@ body::-webkit-scrollbar{
 .contacts-table tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
-.contacts-table tr:last-child td{
+
+.contacts-table tr:last-child td {
     border: none;
 }
+
 .contacts-table tr th:nth-child(2),
-.contacts-table tr th:nth-child(3){
+.contacts-table tr th:nth-child(3) {
     border-left: #fff 1px solid;
 }
 
-.pages{
+.pages {
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -135,23 +148,27 @@ body::-webkit-scrollbar{
     padding-right: 30px;
     font-size: 14px;
 }
-.page-desc{
+
+.page-desc {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
 }
-.page-desc i{
+
+.page-desc i {
     cursor: pointer;
 }
-.page-no{
+
+.page-no {
     background-color: #0084FF;
     color: white;
     padding: 4px 10px 4px 10px;
     border-radius: 50px;
     text-align: center;
 }
-.page-total{
+
+.page-total {
     padding: 5px 10px;
     border-bottom: #ccc solid 2px;
 }
