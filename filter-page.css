@@ -71,6 +71,7 @@ body::-webkit-scrollbar{
     margin-top: 20px;
     gap: 5px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .contacts-box {
